@@ -4,5 +4,19 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [require("@tailwindcss/typography"), require("@tailwindcss/forms")],
+  
+  plugins: [require("@tailwindcss/typography"), require('flowbite/plugin'), require("@tailwindcss/forms")],
+  
+  extend: {
+
+    animation: {
+      shine: "shine 1s",
+    },
+    keyframes: {
+      shine: {
+        "100%": { left: "125%" },
+      },
+    },
+    
+  },
 };
